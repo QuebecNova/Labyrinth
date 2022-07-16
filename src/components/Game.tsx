@@ -26,7 +26,14 @@ export default function Game({startingField} : Props) {
 
 
     const renderedSquares = game.squares.map(square => {
-        return <Square square={square} key={square.id} setWin={setWin} win={win}/>
+        return (
+            <Square 
+                square={square} 
+                key={square.id} 
+                setWin={setWin} 
+                win={win}
+            />
+        )
     })
 
     if (!!win) {

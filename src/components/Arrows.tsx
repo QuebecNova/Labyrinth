@@ -15,8 +15,10 @@ export default function Arrows() {
     const interval = setInterval(() => {
       if (count >= game.arrowsNumber) return
 
-      const arrowElement = (<Arrow direction={game.arrows[count]} key={uuid()}/>)
+      const arrowElement = <Arrow direction={game.arrows[count]} key={uuid()}/>
+      
       setArrowsElements(element => [...element, arrowElement])
+
       count++
     }, 8000 / game.arrowsNumber)
   

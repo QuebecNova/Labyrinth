@@ -6,10 +6,14 @@ export default function Lost() {
 
     const dispatch = useAppDispatch()
 
+    function restartGame() : void {
+        dispatch(restart())
+    }
+
   return (
     <div className='end lost'>
         <p>You Wrong!</p>
-        <button onClick={() => dispatch(restart())}>Restart</button>
+        <button onClick={restartGame}>Restart</button>
     </div>
   )
 }

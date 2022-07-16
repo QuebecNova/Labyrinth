@@ -15,12 +15,15 @@ export default function Square({square, setWin, win}: Props) {
 
   function choosenSquare() : void {
     dispatch(setPlayerField(square.id))
+
     const isChoosenRight = square.endHere
+    
     if (isChoosenRight) {
       setWin(1)
     } else {
       setWin(2)
     }
+
   }
 
   return (

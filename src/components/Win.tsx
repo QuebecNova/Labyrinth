@@ -6,10 +6,14 @@ export default function Win() {
 
     const dispatch = useAppDispatch()
 
+    function restartGame() : void {
+        dispatch(restart())
+    }
+
   return (
     <div className='end win'>
         <p>You Right!</p>
-        <button onClick={() => dispatch(restart())}>Restart</button>
+        <button onClick={restartGame}>Restart</button>
     </div>
   )
 }

@@ -29,7 +29,11 @@ export default function StartGame() {
     <div className='starting-settings'>
         <p>You need to move through labyrinth using arrows</p>
         <p>Choose difficulty:</p>
-        <select name="difficulty" className='difficulty' onChange={changeDifficulty}>
+        <select 
+            name="difficulty" 
+            className='difficulty' 
+            onChange={changeDifficulty}
+        >
             <option value="Easy">Easy</option>
             <option value="Medium">Medium</option>
             <option value="Hard">Hard</option>

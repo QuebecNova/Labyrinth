@@ -16,8 +16,12 @@ export default function createArrows(arrowsNum : number, startingField: number) 
         
         const isDownLegal = randomNum < 2.5 && newField < 6
         const isUpLegal = randomNum >= 2.5 && randomNum < 5 && newField > 2
-        const isRightLegal = randomNum >= 5 && randomNum < 7.5 && newField !== 2 && newField !== 5 && newField !== 8
-        const isLeftLegal = randomNum >= 7.5 && newField !== 0 && newField !== 3 && newField !== 6
+        
+        const isRightLegal = randomNum >= 5 && randomNum < 7.5 && 
+            (newField !== 2 && newField !== 5 && newField !== 8)
+
+        const isLeftLegal = randomNum >= 7.5 &&
+            (newField !== 0 && newField !== 3 && newField !== 6)
 
         let noLegals = false
         
